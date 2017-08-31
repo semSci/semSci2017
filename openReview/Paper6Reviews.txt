@@ -1,0 +1,53 @@
+Review 1: Borderline
+
+This paper aims to present a novel approach for capturing provenance information about the process of generating a linked dataset, at the term level, in order to ensure the reproducibility of the dataset. The topic is relevant to the workshop and can potentially contribute to fruitful workshop discussions.
+
+The paper could be strengthened if the authors could motivate their work with a list of unique challenges of providing provenance for the dataset generation tasks. As far as I can see, the process can be very diverse, depending on different cases. By synthesising these scenarios to drive the design, the result can be more compelling and complete.
+
+The authors should also think about having a narrower claim of the contribution. IMO, provenance information itself cannot achieve real reproducibility. It provides a recipe, which might no longer be reproducible, if the actual mechanisms were no longer available or accessible. As a recipe, how do the authors plan to evaluate its completeness? Would an approach of involving multiple users to try out the provenance information be a useful way, or is it possible to provide a formal proof?
+
+Furthermore, what kind of practical tooling might be possible to realise the vision? What kind of evaluation can be set up to guarantee the quality of the collected provenance, so that the work and tool can truly be useful.
+
+The topic is not new, nor the contributions. But it is great to see this effort and hopefully the paper can contribute to further discussions at the workshop.
+
+Review 2: Borderline
+This paper describes an extension/usage of PROV to capture data transformations in the context of Linked Data generation.
+
+The paper is well written, but I found some parts very difficult to follow. The topic of tracking data provenance on datasets is not new, but it is rare to find such provenance in the domain described in the paper, and therefore I think it's a valuable contribution to the workshop. I hope it can raise awareness on the methodology that we follow as a community when producing Linked Data. In addition, the approach seems to be platform and system independent, which may help its adoption.
+
+However, the paper could improve on the following aspects:
+
+- The paper refers in the abstract to "data generation", but the context seems to be Linked Dataset generation. This is not the same in scope, as it makes some of the claims of the abstract not true: there is a lot of previous work on capturing provenance of datasets from scientific experiments.
+
+- I feel like the PROV extension could easily reuse some of the vocabularies that workflow systems use to specify inputs and outputs of plans and their executions (http://purl.org/net/p-plan#, http://vcvcomputing.com/provone/provone.html, http://wf4ever.github.io/ro/#wfdesc), as the intent is clearly the same: capture the transformations made to the result of an experiment.
+
+- The prov extension does not have a URI. Is it really an extension, or just adoption of the standard?
+
+- Some of the claims that are made by the authors are not supported by any evidence throughout the paper. For example, recording the provenance of an execution does not ensure its reproducibility: the authors do not archive any of the software or data, and therefore it could be unavailable at the time the user wanted to rerun experiment. The authors don't show how the executed traces can be used to reproduce or compare different executions, and having worked in the domain I see that are critical details missing (e.g., the parameters used to invoke the JAR file used in the example, the infrastructure needed to execute the JAR, etc.). Also, for virtualization approaches such as Docker, the software doesn't have to be always available. It may be already installed in an existing image that could be maintained by the authors. The paper would benefit a lot from not just capturing a transformation, but being able to reproduce a result or compare an execution with a previous one.
+
+- One of the main concerns that I have is that the examples listed in the paper are not very well explained. I read the description of listing one several times, but I didn't understand that it was making the first letter of every word into a capital letter until I went online and saw the full description on the web page.
+
+- On the distinction between function and tool: In PROV there is the notion of Plan. Activities are associated with agents that follow plans, or in your case, Data transformations are associated with tools following functions. It can be argued whether PROV activities can "use" the plans as well, but the general consensus is that all the activity usages are the inputs to the activity. Plans should qualify the wasAssociatedWith relationship. See https://www.w3.org/TR/prov-o/#qualifiedAssociation for an example.
+
+- It is unclear to me how the PROV statements are generated. It seems that it is coming from a mapping specification, not illustrated in Listing 1. However, is this mapping the same for all possible transformations? Who creates the RML file? How difficult is to create mapping files for new transformation pipelines? If everything needs to be done manually, is there really a gain versus workflows systems, where this process is already automated (and are also platform independent)?
+
+- I don't understand what are "schema transformations". It is not defined throughout the paper! It is explained what they involve in Section 3.1, but not what they are.
+
+- An example in Section 2.2 would help to understand the issues with automatic provenance capture, as I didn't quite understand the second paragraph of that section: why would explicit graphs conflict with named graphs? What do the authors understand by a singleton property? And why are the schema transformations relevant if we are just capturing how the data evolves?
+
+- There are some typos in the paper, a proof-read is necessary.
+
+- The PROV-O reference is missing the editors of the recommendation.
+
+Review by Daniel Garijo
+
+
+Review 3: Accept
+
+This paper describes how to capture provenance at the data value level, rather than at the dataset level. That is, if a CSV file containing temperature readings in Celsius is transformed into Farenheit, that is a dataset (schema) level transformation. Here the focus is on capturing the specific trnasformation of a particular data value. The approach is to use PROV to capture data transformations in addition to schema transformations.
+
+An interesting aspect of the work is the distinction made between function and tool, that is, between conceptual transformation and implementation. This is an important distinction that is not often made. The function level seems to correspond to steps in P-PLAN, which extends PROV to capture the intended plan which could be thought of as the functions.
+
+An interesting challenge is how to scale up the provenance of data transformations. That is, if we capture provenance at that granularity for each value of a large dataset, then it may become unmanageable to query the records. Particularly if the data values undergo several transformations. The provenance records could be significantly larger than the dataset itself.
+
+Section 3.1 has a paragraph that discusses interaction provenance and actor provenance. I did not understand this distinction and why it is important for the paper. It should be clarified, or deleted altogether.

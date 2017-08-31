@@ -1,0 +1,30 @@
+Review 1: Weak reject
+
+This paper describes the requirements needed to represent data protection when sharing data. The authors review some of the existing vocabularies that can be reused for this purpose, and draft an extension that is not yet implemented.
+
+The paper reads well and it is easy to follow. The topic is not new, but it could be potentially relevant to the workshop. One of my concerns is that the authors emphasize that their approach is for sharing scientific data, but in reality the approach seems to be generic for restricting access and managing any kind of data. Is there any feature of scientific data that makes it different from e.g., legal data?
+
+Another issue that the authors might want to consider is the lack of related work about the topic being addressed. Right management is not my main topic of expertise, but I am aware of the Linked Data Rights vocabulary, which is used in conditional linked data environments (i.e., can only access to certain resources with the appropriate rights). See the following links for more information:
+
+http://purl.oclc.org/NET/ldr/ns#,
+http://conditional.linkeddata.es/ldr/en/index.html
+
+Some terms like data controller are not very well defined. What is specifically the role and responsibility of a data controller?
+
+The vocabulary is described but does not have a URI, so I consider it as not implemented. The diagram helps, but maybe within an example it would be better to understand the scope of the paper. As it is I don't understand very well what the arrows mean. What do the colors of the boxes mean? Why are there no relationships between ODRL and DPRL?
+
+It is not clear to me how the vocabulary would be used later by an application. And who would be in charge of annotating the data. A few sentences address this issue in the conclusions, but having a better explanation would really help the reader understand what is the vision for the target vocabulary.
+
+Review by Daniel Garijo
+
+Review 2: Strong accept
+
+This paper is an excellent and very interesting read. The topic of the paper is very timely---indeed research institutions are increasingly in need for approaches to handle the current and upcoming issues on data protection and privacy. For this, the paper guides the reader nicely to the solution, built using existing LD vocabularies.
+
+I would only have liked to see one clear example of the use of the vocabulary, is it possible to include that in the camera ready version, or have a link online to an example?
+
+The ontology was downloadable, but at the time I checked, the doc was not, i.e. the link "Temp. LODE doc." at https://openscience.adaptcentre.ie/projects/CDMM/DPRL/
+
+Review 3: Weak Accept
+
+This paper covers a very timely topic and the authors seem to be very knowledgable on the topic. Being able to support GDPR in the upcoming years will be a pressing issue for researchers, organisations and institutions. The proposed work is grounded upon ODRL, which is currently being standardised in W3C. Although this can be a solid ground to start from, the authors have missed a lot of related work in data right management field. The explanation about the extension is too detailed but also lack an example to demonstrate exactly what has been provided in the extension. The authors should work hard on including a working example in the camera ready. Also, how exactly do the authors expect this to be different from vocabularies not specifically designed for scientific data, and how will it be truly adopted? This work still seems to be quite early stage, but might be good to have in the workshop to stimulate discussions and new collaboration relationships.

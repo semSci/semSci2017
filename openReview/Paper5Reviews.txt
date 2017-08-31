@@ -1,0 +1,20 @@
+Review 2: Accept
+Authors briefly introduce an approach for documenting software environments and their configuration in the context of computer science experiment. In this work, such approach is applied to npm packages repository, and an example of it applied to a real paper experiment is provided.
+
+The paper is well written in general, and the contribution it exposes is relevant. Also, the discussion introduced in section 1 is quite interesting.
+
+Some aspects that could be considered:
+
+- Section 2.2 in Related Work section is quite vague, being more an State of the Art analysis, as it does not compare ontologies to the one provided in this work. Also, it is not clear to me the role of Data Cube in this context. Also, it would be interesting to include as well the RMap vocabulary (used in DiSCO resources).
+
+- I don't find any proper justification on the selection of npm packages for the use case. Even though they are popular (as stated by authors), they do not seem to me the most representative example of software environment in computational science.
+
+- The software terminology used in section 3.1 could be aligned with the one introduced by Matthews et. al. in 2010 [1]. It seems to be an ad-hoc description of npm (which as far as the paper describes, it is just a use case).
+
+- It is not clear how software components that are not npm packages could be described. It is not clear that this approach could be applied to software tools outside repository ecosystems.
+
+-Links to the resources involved on the paper should be included. A link to the ontology is only (partially) introduced in Fig 1 caption. Also having references (links) to the data generated for the use case introduced in section 4 would be needed as evidences.
+
+
+[1] http://ijdc.net/index.php/ijdc/article/view/148/210
+

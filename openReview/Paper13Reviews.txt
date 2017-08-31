@@ -1,0 +1,34 @@
+Review 1: Borderline
+
+This paper provides an interesting challenge: how to provide a knowledge graph of research for a research group. The paper is written quite well, and the online documentation of the vocabulary gives an idea of the terms included.
+
+My main concern with the paper is that it does not give a clear picture of the use of the vocabulary so far. Essentially, how big is the graph now? How many different instances of different classes of the vocab you now have there? The evaluation is also reported quite superficially. How many consumers (i.e. resarch group members?) gave comments? Can you quote some of the comments (both positive, negative)?
+
+Did you compare the system with some other ways to achieve the same aims (e.g. via shared folders, or shared docs, or shared spreadsheets)?
+
+What is the mentioned "a range of required views and analyses"? Can you give examples of these?
+
+I tried to check the demo to get familiar with it at https://bmakewiki.th-brandenburg.de but got a "502", please check the server settings. Fig 3. is really blurry when printed, and also in pdf, can you please improve it? Also, please explain what exactly can we use the first implementation of your approach.
+
+Could you improve Fig 1? When printed it is almost unreadable, and perhaps arranging the terms in more vertical manner can fix this (not sure if essepuntato-service supports this though?).
+
+Other than these comments I find the paper could provide interesting discussions at the workshop, especially when improved accordingly.
+
+Review 3: Borderline
+
+This paper presents an approach for creating knowledge bases from research papers in a collaborative manner using a wiki.
+
+The paper is well written, but perhaps a little disorganized and without a novel contribution (the proposed system does not seem to annotate any of the concepts of the vocabulary in an automated manner). However, I think this work is relevant for the workshop, and, if accepted, it would create a nice discussion. This is an area with many open research challenges, and being able to capture and share the contents of papers in a structured manner may become crucial for developing systems that help exploring and comparing existing work.
+
+One of my concerns with this work was that although the vocabulary is available and dereferenceable, the system is not (returns a 502). Given that the main contribution of the paper is the system, I found frustrating not being able to assess it properly. Also, the paper states that the system has capabilities for importing RDF, but never describes how this RDF is being generated. Is there a process that extracts metadata from papers and then adds it to the wiki? Is it everything inputed by hand by users?
+
+Regarding the vocabulary, it is unclear to me where do the requirements for the vocabulary come from, and how they were gathered and by whom. As a result, I don't understand why "Dataset" or "Software" are not a research artifacts. Or a script, an intermediate result, a parameter used in an execution, etc. All these are terms associated to scientific experiments, which may also be research artifacts. The methodology used to create the vocabulary to cover the requirements also remains unclear to me. In addition, I have noticed that the new classes introduced may have a huge overlap with some of the ontologies in: http://www.sparontologies.net/ontologies. I recommend the author to have a look at them before proposing new terms that may mean the same. I also don't understand very well why the author has picked schema.org, a vocabulary with almost no semantics, to represent complex things like the elements of the articles and their relationships.
+
+I think that the paper would improve by adding a few sentences on a potential way to evaluate the system. Is it just by asking users whether it makes the contents of papers easy to reuse? Is there an evaluation on the ontology planned?
+
+Finally, I got confused by the architecture Figure. I don't understand why there are boxes with dots. Does this mean that the authors plan to integrate other existing data into the system? Or that the architecture design is open and incomplete at the moment? The cleaning, transformation and interlinking processes are not described in the paper. How many of these boxes does OntoWiki address by default, and which ones are the ones the authors have had to modify?
+
+Review by Daniel Garijo
+
+
+

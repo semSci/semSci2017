@@ -1,0 +1,26 @@
+Review 2: Weak accept
+
+Please find my comments at
+
+http://labs.linkingdata.io/peerviewer/web/viewer.html?file=files/to-review-SemSci_2017_paper_9.pdf
+
+login author2
+passwd ArtiCle2017
+
+I like the paper. it is an analysis of the quality of the metadata in BioSample. interesting, but seems like work that is just starting. the authors dont really go deep in the data, instead they spend a lot of time introducing the bioSample database. The paper is well written, the approach is solid, or it seems to be because I did not have time to recreate the experiment or check the git. What I dont like in this paper is that from what the authors initially say it seems like they have a lot of data so they could have done a much better job in presenting results and discussion the data. instead, results and discussion. instead, this paper only has 2.5 pages in discussion and results. I am sure that the authors have more than they are presenting and could have made a stronger paper. nice paper, I like it. it should be more data driven and less narrative dependent. it will generate a nice discussion. for instance, why don't you use JS and generate some interactive visualisations that tell the story and get the msg across. instead, you choose to rely on a heavy narrative that, mo matter how interesting the issue being addressed, just make it boring and kind of make the whole thing less interesting that it really is. anyway, nice paper.
+
+Review 3: Accept
+
+This is an excellent paper. The authors approach the important question of how well existing metadata is typically supplied within a single database (BioSample) and provide a carefully-developed study of that question. As such, the authors provide an interesting quantitative study of the content of the BioSample database that more than adequately passes muster for publication.
+
+I feel that some additional ideas would perhaps have added to the quality of the paper:
+
+1) Some discussion or representation of the curation process used by BioSample that took into account to opposed issues of data accuracy and usage by the community. The main conclusions of the paper highlight the variability and heterogeneity of the data submitted but do not discuss how more restrictive curation practices might hinder the use of the system altogether.
+
+2) 'The use of ontology terms is particularly substandard' - why is this? Is there any follow-up that could help understand why this is the case.
+
+3) This is a single example for a well populated system. How does this compare to other databases?
+
+4) Naturally, the authors are very 'ontology-centric' in their approach. Perhaps the ontology framework we currently use is particularly hard to adopt for domain users and part of the solution requires modification of the framework. What are the underlying issues that drive these poor data curation habits for submitters?
+
+Writing is of high quality and readability.

@@ -1,0 +1,44 @@
+Review 1: Accept
+
+This paper presents an approach to automatically retrieve different types of abstracts from scientific papers. An evaluation is performed that compares these different types of summaries based on their performance as proxy for the full text of the article as well as for the similarity to other articles.
+
+This is a nice piece of work with some interesting ideas. I think this will give a nice presentation at the workshop, and I suggest to accept this paper.
+
+I have one major question mark with respect to the evaluation though: I didn't understand whether the evaluation for both, internal and external representativeness, somehow controlled for the length of the different summaries. Figure 1 shows that the approach summaries are the longest, and therefore, if this is not controlled for, it wouldn't be surprising that this type of summary best represents the full text. This should be clarified in the final paper.
+
+Some more minor comments:
+
+- rephrase: "non similar enough pairs"
+- "should enables" > "should enable"
+- "the size of the corpora" > "the size of the corpus"
+- omit spaces in front of footnote numbers
+- consider using a bar chart instead of a pie chart for Figure 2 and Figure 4
+- I didn't understand Figure 3; maybe this could be explained better
+- Text wrapping problem in beginning of Section 4 due to missing spaces after commas ("approach,challenge,background,outcomes
+
+Review by Tobias Kuhn
+
+
+Review 2: Accept
+
+This article explores how scientific articles can be compared through their summaries. Summaries based on the various rhetorical sections of the paper (background, approach, future work, etc.) are computed using LDA and then compared against the normal summary of a scientific article, its abstract. The paper defines two different similarities:
+
+1) how well a summary describes the full text of an article (internal-representativeness); and
+2) how well can a summary be used to relates two scientific articles (external-representativeness).
+
+One interesting outcome was that content based summaries (e.g. using the approach summary) perform better than using the abstract of the article for connecting related articles. In general, these initial results I found quite compelling in terms of the new set of work comparing full text and abstracts.
+
+Areas of improvement:
+- For internal representatives, isn’t it obvious that the LDA would be better at using the full text than the author? The author is doing something slightly different than summarizing, they are highlighting important parts. It would be useful to discuss this in more detail and not to make too much of the difference.
+- The gold standard seems to be an valuable resource. I couldn’t see where that was made available. Could you open that up?
+- It would be potentially interesting to use a embedding based approach for the calculation of summaries as that might capture some additional latent semantics that LDA might not capture.
+- Providing examples of the summaries coming from different rhetorical components would be helpful for the reader.
+
+Overall, I think this would make for a strong contribution to the workshop
+
+
+Clarifications:
+
+* Springer API? Did you use the Springer or Elsevier API? The journals you mention are published by Elsevier.
+* Figures 5 & 6: Can you label the x & y axes?
+

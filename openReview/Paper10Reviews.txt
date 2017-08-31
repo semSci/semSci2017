@@ -1,0 +1,13 @@
+Review 1: Accept
+
+This paper presents the Semantic Data Dictionary (SDD) specification to annotate the data variables ("columns") of a dataset in order to provide machine-interpretable meta-data.
+
+This seems to be a thought-out and practical approach to give formal meaning to tabular data. I was missing, however, references to some of the many approaches to apply Semantic Web and Linked Data techniques to spreadsheets. It would be interesting and important to know in what way the presented approach differs from that body of previous work.
+
+Some more minor comments:
+
+- Maybe the tables can be reformatted so they fit into the width of the text
+- Apart from enabling a complete formal representation, can the virtual columns also provide some immediate benefit to users?
+- I would have liked to read a bit more about the Evaluation. A figure with an overview of the results would have been nice too. Maybe this section can be expanded, for example at the cost of Section 5 (Discussion), which I found quite repetitive and not so important.
+
+Review by Tobias Kuhn

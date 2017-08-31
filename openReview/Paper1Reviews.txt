@@ -1,0 +1,53 @@
+Review 2 (Weak Reject): 
+
+This paper describes what is essentially a converter from the noWorkflow provenance output to the REPRODUCE-ME ontology. REPRODUCE-ME is a small extension to the P-PLAN & PROV ontologies for describing the execution of (shell) scripts. It evalautes the contribution through the use of competency questions against the captured provenance for a small python program (computing the factorial).
+
+Overall, I think the connection between command line outputs and the interoperable representations is an important area to consider and a worthwhile discussion area for the workshop.
+
+Positives:
+- Well written and clear the procedure
+- The availability of the data online (although this could be done using a sustainable repository with a corresponding DO).
+- The competency questions are useful.
+
+Areas for improvement:
+
+- The contribution of this paper beyond what was presented in the paper above what was presented in the ESWC poster should be clearer. (It’s good that you cited it though!) It seems like it’s really just the conversion between the noWorkflow representation and the REPRODUCE-ME ontology.
+- It would have been good to see the output on more complex scripts. While Factorial is a reasonable example program, I think it’s hard to say that the approach is generalizable.
+- I think a better comparison to existing systems that export PROV-O from command line/s script tracking [1,2] would be beneficial. Why don’t those achieve what this approach does?
+- I think the paper could have better discussed and/or shown the benefits of going to an extra layer of abstraction. How does a user benefit over using a tool like Pound Shell (https://irl.cs.ucla.edu/lbsh/)? I think there’s something to be said for interoprability here, for example, by showing the usage of the provenance data in a downstream task or on another system.
+
+Overall, I wouldn’t mind the paper in the workshop but it seems quite incremental at this point over the authors and other existing work.
+
+
+[1] Stamatogiannakis, Manolis, Paul Groth, and Herbert Bos. "Decoupling provenance capture and analysis from execution." 7th USENIX Workshop on the Theory and Practice of Provenance (TaPP). 2015.
+
+[2] Ashish Gehani and Dawood Tariq, SPADE: Support for Provenance Auditing in Distributed Environments, 13th ACM/IFIP/USENIX International Conference on Middleware, 2012.
+See https://github.com/ashish-gehani/SPADE/wiki/Creating-Prov-output
+
+Review 3 (Reject):
+
+This paper discusses how to extend the noWorkflow system, which captures provenance information about script executions, with the PROV standard for structuring the provenance information.
+
+The paper says that noWorkflow captures provenance in a way that is not structured. However, from the noWorkflow IPAW 2016 paper: “noWorkflow captures trial start time, finish time, command line, success status (i.e., indication if the trial finished successfully), environment variables, function activations (calls) with parameters, returned values, duration, caller, variables, and variable dependencies.” The provenance records must be structured, since the IPAW 2014 paper describes how to compare provenance records. Perhaps the issue with noWorkflow is that the provenance is not published with a standard like PROV. I am guessing that is the main contribution of this paper.
+
+The paper describes the REPRODUCE-ME ontology, which is an extension of PROV and P-PLAN, to represent the provenance records of noWorkflow. But I did not see why the terms introduced by REPRODUCE-ME are needed. For example, what is the need to introduce repr:Experimenter, rather than just use prov:Person?
+
+In summary, I could not see what the novel idea or contribution is in this paper.
+
+A few minor comments follow.
+
+On page 2 the paper says: "Conventional (non-semantic) systems for provenance management cannot answer these questions easily". Can you cite what systems do you mean? Provenance management systems are typically pretty structured. Perhaps they don't record as much detail, but that has nothing to do with being semantic or non-semantic.
+
+The description of repr:correspondsToActivity should make it clear that it is the reverse of p-Plan:correspondsToStep, at the moment both descriptions look the same.
+
+In the abstract, "using REPRODUCE-ME ontology" needs an article.
+
+In section 2, "YesWorkflow tool is another tool" has an extra "tool".
+
+In section 2, "Executions of a script generates" has an extra "s".
+
+In section 3 "The noWorkflow captures" has an extra article.
+
+Citation [13] should appear first in section 1 and/or 2 when REPRODUCE-ME is first mentioned.
+
+Page 4: the descriptions of the terms in the ontology mention "function" in several places. How is function represented?
